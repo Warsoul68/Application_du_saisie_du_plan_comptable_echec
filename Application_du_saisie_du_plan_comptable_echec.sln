@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application_du_saisie_du_plan_comptable_echec", "Application_du_saisie_du_plan_comptable_echec\Application_du_saisie_du_plan_comptable_echec.csproj", "{6417B7E1-8E00-4A38-958A-8DBC8AFD2780}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIB_DAL", "LIB_DAL\LIB_DAL.csproj", "{8179B9A6-71D6-4F10-A6F7-61D58AE04E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIB_BLL", "LIB_BLL\LIB_BLL.csproj", "{68EA598C-EF73-4D6B-8EF6-E68AE6AAA9DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{6417B7E1-8E00-4A38-958A-8DBC8AFD2780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6417B7E1-8E00-4A38-958A-8DBC8AFD2780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6417B7E1-8E00-4A38-958A-8DBC8AFD2780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8179B9A6-71D6-4F10-A6F7-61D58AE04E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8179B9A6-71D6-4F10-A6F7-61D58AE04E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8179B9A6-71D6-4F10-A6F7-61D58AE04E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8179B9A6-71D6-4F10-A6F7-61D58AE04E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68EA598C-EF73-4D6B-8EF6-E68AE6AAA9DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EA598C-EF73-4D6B-8EF6-E68AE6AAA9DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EA598C-EF73-4D6B-8EF6-E68AE6AAA9DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EA598C-EF73-4D6B-8EF6-E68AE6AAA9DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
