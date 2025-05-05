@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LIB_BLL
 {
-    public class Class1
+    public class Operation
     {
     }
 }

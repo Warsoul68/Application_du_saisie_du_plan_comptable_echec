@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector NET 9.1\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -87,6 +91,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LIB_BLL\LIB_BLL.csproj">
+      <Project>{68ea598c-ef73-4d6b-8ef6-e68ae6aaa9da}</Project>
+      <Name>LIB_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LIB_DAL\LIB_DAL.csproj">
+      <Project>{8179b9a6-71d6-4f10-a6f7-61d58ae04e09}</Project>
+      <Name>LIB_DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
