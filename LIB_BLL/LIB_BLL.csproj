@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Affecte.cs" />
     <Compile Include="Annee.cs" />
+    <Compile Include="Utilisateur.cs" />
     <Compile Include="Compte.cs" />
     <Compile Include="Depense .cs" />
     <Compile Include="Operation.cs" />
