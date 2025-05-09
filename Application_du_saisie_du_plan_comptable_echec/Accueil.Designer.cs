@@ -197,6 +197,7 @@
             this.tsDepenseParametre.Name = "tsDepenseParametre";
             this.tsDepenseParametre.Size = new System.Drawing.Size(180, 22);
             this.tsDepenseParametre.Text = "Dépense";
+            this.tsDepenseParametre.Click += new System.EventHandler(this.tsDepenseParametre_Click);
             // 
             // tsRecetteParametre
             // 

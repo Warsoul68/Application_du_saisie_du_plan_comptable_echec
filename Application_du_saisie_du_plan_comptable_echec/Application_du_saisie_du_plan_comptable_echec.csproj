@@ -56,11 +56,23 @@
     <Compile Include="Accueil.Designer.cs">
       <DependentUpon>Accueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connexion.Designer.cs">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="NouvelleOperationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NouvelleOperationForm.Designer.cs">
       <DependentUpon>NouvelleOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Option_pour_les_depenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Option_pour_les_depenseForm.Designer.cs">
+      <DependentUpon>Option_pour_les_depenseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Option_pour_les_recetteForm.cs">
       <SubType>Form</SubType>
@@ -73,8 +85,14 @@
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Connexion.resx">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NouvelleOperationForm.resx">
       <DependentUpon>NouvelleOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Option_pour_les_depenseForm.resx">
+      <DependentUpon>Option_pour_les_depenseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Option_pour_les_recetteForm.resx">
       <DependentUpon>Option_pour_les_recetteForm.cs</DependentUpon>
