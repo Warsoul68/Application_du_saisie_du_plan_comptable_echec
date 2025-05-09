@@ -61,5 +61,19 @@ namespace Application_du_saisie_du_plan_comptable_echec
             PDE.Show();
 
         }
+
+        private void tsCompte_Click(object sender, EventArgs e)
+        {
+            VisualisationCompte VC = new VisualisationCompte();
+            VC.Show();
+
+        }
+
+        private void tsOperation_Click(object sender, EventArgs e)
+        {
+            OperationFr OFR = new OperationFr();
+            OFR.Show();
+
+        }
     }
 }

@@ -45,6 +45,9 @@
             this.tsParametre = new System.Windows.Forms.ToolStripDropDownButton();
             this.tsDepenseParametre = new System.Windows.Forms.ToolStripMenuItem();
             this.tsRecetteParametre = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsCompte = new System.Windows.Forms.ToolStripButton();
+            this.tsOperation = new System.Windows.Forms.ToolStripButton();
+            this.btnFiltrer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tsMenuApplication.SuspendLayout();
             this.SuspendLayout();
@@ -150,7 +153,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 138);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 154);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -160,7 +163,7 @@
             // 
             // btnNewOperation
             // 
-            this.btnNewOperation.Location = new System.Drawing.Point(162, 340);
+            this.btnNewOperation.Location = new System.Drawing.Point(157, 356);
             this.btnNewOperation.Margin = new System.Windows.Forms.Padding(2);
             this.btnNewOperation.Name = "btnNewOperation";
             this.btnNewOperation.Size = new System.Drawing.Size(125, 20);
@@ -173,7 +176,9 @@
             // 
             this.tsMenuApplication.BackColor = System.Drawing.Color.Silver;
             this.tsMenuApplication.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsParametre});
+            this.tsParametre,
+            this.tsCompte,
+            this.tsOperation});
             this.tsMenuApplication.Location = new System.Drawing.Point(0, 0);
             this.tsMenuApplication.Name = "tsMenuApplication";
             this.tsMenuApplication.Size = new System.Drawing.Size(458, 25);
@@ -206,11 +211,41 @@
             this.tsRecetteParametre.Text = "Recette";
             this.tsRecetteParametre.Click += new System.EventHandler(this.tsRecetteParametre_Click);
             // 
+            // tsCompte
+            // 
+            this.tsCompte.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsCompte.Image = ((System.Drawing.Image)(resources.GetObject("tsCompte.Image")));
+            this.tsCompte.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsCompte.Name = "tsCompte";
+            this.tsCompte.Size = new System.Drawing.Size(54, 22);
+            this.tsCompte.Text = "Compte";
+            this.tsCompte.Click += new System.EventHandler(this.tsCompte_Click);
+            // 
+            // tsOperation
+            // 
+            this.tsOperation.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsOperation.Image = ((System.Drawing.Image)(resources.GetObject("tsOperation.Image")));
+            this.tsOperation.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsOperation.Name = "tsOperation";
+            this.tsOperation.Size = new System.Drawing.Size(64, 22);
+            this.tsOperation.Text = "Operation";
+            this.tsOperation.Click += new System.EventHandler(this.tsOperation_Click);
+            // 
+            // btnFiltrer
+            // 
+            this.btnFiltrer.Location = new System.Drawing.Point(183, 126);
+            this.btnFiltrer.Name = "btnFiltrer";
+            this.btnFiltrer.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrer.TabIndex = 13;
+            this.btnFiltrer.Text = "Filtrer";
+            this.btnFiltrer.UseVisualStyleBackColor = true;
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 371);
+            this.ClientSize = new System.Drawing.Size(458, 405);
+            this.Controls.Add(this.btnFiltrer);
             this.Controls.Add(this.tsMenuApplication);
             this.Controls.Add(this.btnNewOperation);
             this.Controls.Add(this.dataGridView1);
@@ -254,6 +289,9 @@
         private System.Windows.Forms.ToolStripDropDownButton tsParametre;
         private System.Windows.Forms.ToolStripMenuItem tsDepenseParametre;
         private System.Windows.Forms.ToolStripMenuItem tsRecetteParametre;
+        private System.Windows.Forms.ToolStripButton tsCompte;
+        private System.Windows.Forms.ToolStripButton tsOperation;
+        private System.Windows.Forms.Button btnFiltrer;
     }
 }
 
