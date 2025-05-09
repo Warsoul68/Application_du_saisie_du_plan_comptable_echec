@@ -36,5 +36,8 @@ namespace LIB_BLL
         {
             this.libelleR = libelleR;
         }
+
+        public int IdRecetteAffiche => getIdRecette();
+        public string LibelleRAffiche => getLibelleR();
     }
 }

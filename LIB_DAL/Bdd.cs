@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,13 +9,13 @@ namespace LIB_DAL
 {
     public class Bdd
     {
-        private static MySqlConnection c;
+        private static SqlConnection c;
         public Bdd() { }
 
         public static bool ouvrirConnexion()
         {
-            string chaineDeConnexion = "SERVER=localhost;" + "DATABASE=bdd_saisie_comptable_echec;" + "UID=root;" + "PASSWORD= ;";
-            c = new MySqlConnection();
+            string chaineDeConnexion = "Data Source=PC-MATHIAS\\SQLEXPRESS;" + "Initial Catalog=bdd_saisie_comptable_echec;" + "Integrated Security = SSPI;";
+            c = new SqlConnection();
             c.ConnectionString = chaineDeConnexion;
             try
             {
@@ -30,7 +29,7 @@ namespace LIB_DAL
 
         }
 
-        public static MySqlConnection getConnexion()
+        public static SqlConnection getConnexion()
         {
             return c;
         }
