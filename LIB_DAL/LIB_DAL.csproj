@@ -45,8 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AffecteDAO.cs" />
+    <Compile Include="AnneeDAO.cs" />
     <Compile Include="Bdd.cs" />
+    <Compile Include="CompteDAO.cs" />
+    <Compile Include="DepenseDAO.cs" />
+    <Compile Include="OperationDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecetteDAO.cs" />
+    <Compile Include="TransactionDAO.cs" />
+    <Compile Include="UtilisateurDAO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
