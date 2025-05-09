@@ -46,5 +46,11 @@ namespace Application_du_saisie_du_plan_comptable_echec
             NOF.Show();
 
         }
+
+        private void tsRecetteParametre_Click(object sender, EventArgs e)
+        {
+            ParametreRecette PA = new ParametreRecette();
+            PA.Show();
+        }
     }
 }
