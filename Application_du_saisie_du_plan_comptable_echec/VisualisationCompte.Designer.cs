@@ -35,108 +35,119 @@
             this.lblSoldeCompte = new System.Windows.Forms.Label();
             this.numSoldeCompte = new System.Windows.Forms.NumericUpDown();
             this.btnRechercher = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCompte = new System.Windows.Forms.DataGridView();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnUpdateSolde = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numSoldeCompte)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompte)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumCompte
             // 
             this.lblNumCompte.AutoSize = true;
             this.lblNumCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumCompte.Location = new System.Drawing.Point(12, 19);
+            this.lblNumCompte.Location = new System.Drawing.Point(16, 23);
+            this.lblNumCompte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumCompte.Name = "lblNumCompte";
-            this.lblNumCompte.Size = new System.Drawing.Size(119, 15);
+            this.lblNumCompte.Size = new System.Drawing.Size(144, 18);
             this.lblNumCompte.TabIndex = 0;
             this.lblNumCompte.Text = "Numéro de compte :";
             // 
             // cboNumCompte
             // 
             this.cboNumCompte.FormattingEnabled = true;
-            this.cboNumCompte.Location = new System.Drawing.Point(137, 19);
+            this.cboNumCompte.Location = new System.Drawing.Point(183, 23);
+            this.cboNumCompte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboNumCompte.Name = "cboNumCompte";
-            this.cboNumCompte.Size = new System.Drawing.Size(54, 21);
+            this.cboNumCompte.Size = new System.Drawing.Size(71, 24);
             this.cboNumCompte.TabIndex = 1;
             // 
             // lblLibelleCompte
             // 
             this.lblLibelleCompte.AutoSize = true;
             this.lblLibelleCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLibelleCompte.Location = new System.Drawing.Point(12, 54);
+            this.lblLibelleCompte.Location = new System.Drawing.Point(16, 66);
+            this.lblLibelleCompte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLibelleCompte.Name = "lblLibelleCompte";
-            this.lblLibelleCompte.Size = new System.Drawing.Size(111, 15);
+            this.lblLibelleCompte.Size = new System.Drawing.Size(131, 18);
             this.lblLibelleCompte.TabIndex = 2;
             this.lblLibelleCompte.Text = "Libelle du compte :";
             // 
             // txtLibelleCompte
             // 
-            this.txtLibelleCompte.Location = new System.Drawing.Point(137, 53);
+            this.txtLibelleCompte.Location = new System.Drawing.Point(183, 65);
+            this.txtLibelleCompte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLibelleCompte.Name = "txtLibelleCompte";
-            this.txtLibelleCompte.Size = new System.Drawing.Size(100, 20);
+            this.txtLibelleCompte.Size = new System.Drawing.Size(132, 22);
             this.txtLibelleCompte.TabIndex = 3;
             // 
             // lblSoldeCompte
             // 
             this.lblSoldeCompte.AutoSize = true;
             this.lblSoldeCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoldeCompte.Location = new System.Drawing.Point(12, 88);
+            this.lblSoldeCompte.Location = new System.Drawing.Point(16, 108);
+            this.lblSoldeCompte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSoldeCompte.Name = "lblSoldeCompte";
-            this.lblSoldeCompte.Size = new System.Drawing.Size(106, 15);
+            this.lblSoldeCompte.Size = new System.Drawing.Size(128, 18);
             this.lblSoldeCompte.TabIndex = 4;
             this.lblSoldeCompte.Text = "Solde du compte :";
             // 
             // numSoldeCompte
             // 
-            this.numSoldeCompte.Location = new System.Drawing.Point(137, 88);
+            this.numSoldeCompte.Location = new System.Drawing.Point(183, 108);
+            this.numSoldeCompte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numSoldeCompte.Name = "numSoldeCompte";
-            this.numSoldeCompte.Size = new System.Drawing.Size(100, 20);
+            this.numSoldeCompte.Size = new System.Drawing.Size(133, 22);
             this.numSoldeCompte.TabIndex = 5;
             // 
             // btnRechercher
             // 
-            this.btnRechercher.Location = new System.Drawing.Point(275, 88);
+            this.btnRechercher.Location = new System.Drawing.Point(367, 108);
+            this.btnRechercher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRechercher.Name = "btnRechercher";
-            this.btnRechercher.Size = new System.Drawing.Size(75, 23);
+            this.btnRechercher.Size = new System.Drawing.Size(100, 28);
             this.btnRechercher.TabIndex = 6;
             this.btnRechercher.Text = "Rechercher";
             this.btnRechercher.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvCompte
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 122);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(335, 172);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvCompte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompte.Location = new System.Drawing.Point(20, 150);
+            this.dgvCompte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCompte.Name = "dgvCompte";
+            this.dgvCompte.RowHeadersWidth = 51;
+            this.dgvCompte.Size = new System.Drawing.Size(447, 212);
+            this.dgvCompte.TabIndex = 7;
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(12, 300);
+            this.btnAnnuler.Location = new System.Drawing.Point(16, 369);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(75, 23);
+            this.btnAnnuler.Size = new System.Drawing.Size(100, 28);
             this.btnAnnuler.TabIndex = 8;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
             // btnUpdateSolde
             // 
-            this.btnUpdateSolde.Location = new System.Drawing.Point(231, 300);
+            this.btnUpdateSolde.Location = new System.Drawing.Point(308, 369);
+            this.btnUpdateSolde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdateSolde.Name = "btnUpdateSolde";
-            this.btnUpdateSolde.Size = new System.Drawing.Size(119, 23);
+            this.btnUpdateSolde.Size = new System.Drawing.Size(159, 28);
             this.btnUpdateSolde.TabIndex = 9;
             this.btnUpdateSolde.Text = "Mettre a jour le solde";
             this.btnUpdateSolde.UseVisualStyleBackColor = true;
             // 
             // VisualisationCompte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 347);
+            this.ClientSize = new System.Drawing.Size(500, 427);
             this.Controls.Add(this.btnUpdateSolde);
             this.Controls.Add(this.btnAnnuler);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCompte);
             this.Controls.Add(this.btnRechercher);
             this.Controls.Add(this.numSoldeCompte);
             this.Controls.Add(this.lblSoldeCompte);
@@ -144,10 +155,12 @@
             this.Controls.Add(this.lblLibelleCompte);
             this.Controls.Add(this.cboNumCompte);
             this.Controls.Add(this.lblNumCompte);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "VisualisationCompte";
             this.Text = "Compte";
+            this.Load += new System.EventHandler(this.VisualisationCompte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numSoldeCompte)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,7 +175,7 @@
         private System.Windows.Forms.Label lblSoldeCompte;
         private System.Windows.Forms.NumericUpDown numSoldeCompte;
         private System.Windows.Forms.Button btnRechercher;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCompte;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnUpdateSolde;
     }

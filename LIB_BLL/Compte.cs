@@ -48,5 +48,9 @@ namespace LIB_BLL
         {
             this.soldeCompte = soldeCompte;
         }
+
+        public int NumCompteAffiche => getNumCompte();
+        public string LibelleCompteAffiche => getLibelleCompte();
+        public float SoldeCompteAffiche => getSoldeCompte();
     }
 }

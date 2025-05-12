@@ -33,7 +33,5 @@ namespace LIB_DAL
                     return null;
                 }
             }
-
-
         }
     }

@@ -36,5 +36,8 @@ namespace LIB_BLL
         {
             this.libelleD = libelleD;
         }
+
+        public int IdDepenseAffiche => getIdDepense();
+        public string LibelleDAffiche => getLibelleD();
     }
 }
