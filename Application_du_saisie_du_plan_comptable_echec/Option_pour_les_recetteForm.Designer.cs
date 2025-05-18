@@ -56,7 +56,7 @@
             // 
             this.cboIdRecette.FormattingEnabled = true;
             this.cboIdRecette.Location = new System.Drawing.Point(172, 28);
-            this.cboIdRecette.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboIdRecette.Margin = new System.Windows.Forms.Padding(4);
             this.cboIdRecette.Name = "cboIdRecette";
             this.cboIdRecette.Size = new System.Drawing.Size(73, 24);
             this.cboIdRecette.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             this.cboLibelleRecette.FormattingEnabled = true;
             this.cboLibelleRecette.Location = new System.Drawing.Point(172, 58);
-            this.cboLibelleRecette.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboLibelleRecette.Margin = new System.Windows.Forms.Padding(4);
             this.cboLibelleRecette.Name = "cboLibelleRecette";
             this.cboLibelleRecette.Size = new System.Drawing.Size(164, 24);
             this.cboLibelleRecette.TabIndex = 3;
@@ -84,18 +84,18 @@
             // btnRechercher
             // 
             this.btnRechercher.Location = new System.Drawing.Point(393, 58);
-            this.btnRechercher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRechercher.Margin = new System.Windows.Forms.Padding(4);
             this.btnRechercher.Name = "btnRechercher";
             this.btnRechercher.Size = new System.Drawing.Size(100, 28);
             this.btnRechercher.TabIndex = 4;
-            this.btnRechercher.Text = "Rechercher :";
+            this.btnRechercher.Text = "Rechercher";
             this.btnRechercher.UseVisualStyleBackColor = true;
             // 
             // dgvRecette
             // 
             this.dgvRecette.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecette.Location = new System.Drawing.Point(41, 106);
-            this.dgvRecette.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvRecette.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRecette.Name = "dgvRecette";
             this.dgvRecette.RowHeadersWidth = 51;
             this.dgvRecette.Size = new System.Drawing.Size(452, 185);
@@ -104,7 +104,7 @@
             // btnAnnuler
             // 
             this.btnAnnuler.Location = new System.Drawing.Point(41, 298);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(100, 28);
             this.btnAnnuler.TabIndex = 6;
@@ -114,7 +114,7 @@
             // btnAjouter
             // 
             this.btnAjouter.Location = new System.Drawing.Point(393, 298);
-            this.btnAjouter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAjouter.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(100, 28);
             this.btnAjouter.TabIndex = 7;
@@ -124,7 +124,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(149, 298);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 28);
             this.btnUpdate.TabIndex = 8;
@@ -134,7 +134,7 @@
             // btnSupprimer
             // 
             this.btnSupprimer.Location = new System.Drawing.Point(285, 298);
-            this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(100, 28);
             this.btnSupprimer.TabIndex = 9;
@@ -156,7 +156,7 @@
             this.Controls.Add(this.lblLibelleRecette);
             this.Controls.Add(this.cboIdRecette);
             this.Controls.Add(this.lblIdRecette);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ParametreRecette";
             this.Text = "Parametre pour les Recette";
             this.Load += new System.EventHandler(this.ParametreRecette_Load);
