@@ -21,6 +21,8 @@ namespace Application_du_saisie_du_plan_comptable_echec
 
         private void Accueil_Load(object sender, EventArgs e)
         {
+            Connexion C = new Connexion();
+            C.ShowDialog();
 
             bool ouvert = Bdd.ouvrirConnexion();
 
@@ -44,6 +46,33 @@ namespace Application_du_saisie_du_plan_comptable_echec
         {
             NouvelleOperationForm NOF = new NouvelleOperationForm();
             NOF.Show();
+
+        }
+
+        private void tsRecetteParametre_Click(object sender, EventArgs e)
+        {
+            ParametreRecette PA = new ParametreRecette();
+            PA.Show();
+        }
+
+        private void tsDepenseParametre_Click(object sender, EventArgs e)
+        {
+            ParametreDepense PDE = new ParametreDepense();
+            PDE.Show();
+
+        }
+
+        private void tsCompte_Click(object sender, EventArgs e)
+        {
+            VisualisationCompte VC = new VisualisationCompte();
+            VC.Show();
+
+        }
+
+        private void tsOperation_Click(object sender, EventArgs e)
+        {
+            OperationFr OFR = new OperationFr();
+            OFR.Show();
 
         }
     }
