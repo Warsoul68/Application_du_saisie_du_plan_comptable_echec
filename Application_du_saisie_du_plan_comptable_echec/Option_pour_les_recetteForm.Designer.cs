@@ -82,6 +82,7 @@
             this.btnAnnuler.TabIndex = 6;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnAjouter
             // 
@@ -92,6 +93,7 @@
             this.btnAjouter.TabIndex = 7;
             this.btnAjouter.Text = "Ajouter";
             this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // btnUpdate
             // 
@@ -102,6 +104,7 @@
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Mettre a jour";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSupprimer
             // 
@@ -112,6 +115,7 @@
             this.btnSupprimer.TabIndex = 9;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
             // txtLibelleRecette
             // 
@@ -131,7 +135,7 @@
             // 
             this.BtnRechercherId.Location = new System.Drawing.Point(393, 58);
             this.BtnRechercherId.Name = "BtnRechercherId";
-            this.BtnRechercherId.Size = new System.Drawing.Size(121, 23);
+            this.BtnRechercherId.Size = new System.Drawing.Size(145, 23);
             this.BtnRechercherId.TabIndex = 12;
             this.BtnRechercherId.Text = "Rechercher par id";
             this.BtnRechercherId.UseVisualStyleBackColor = true;

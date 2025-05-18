@@ -57,5 +57,73 @@ namespace LIB_DAL
 
             }
         }
+
+        public static int creer(Recette r)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            cmd.Connection = Bdd.getConnexion();
+            cmd.CommandText = "insert into Recette values (" + r.getIdRecette() + ", '" + r.getLibelleR() + "')";
+            try
+            {
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+
+                dr.Close();
+                return cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                return 0;
+
+
+            }
+        }
+        public static int supprimer(Recette r)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            cmd.Connection = Bdd.getConnexion();
+            cmd.CommandText = "delete from Recette where id = " + r.getIdRecette();
+            try
+            {
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+
+                dr.Close();
+                return cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                return 0;
+
+
+            }
+        }
+
+        public static int modifier(Recette r)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            cmd.Connection = Bdd.getConnexion();
+            cmd.CommandText = "update Recette set libelle = '" + r.getLibelleR() + "' where id = " + r.getIdRecette();
+            try
+            {
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+
+                dr.Close();
+                return cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                return 0;
+
+
+            }
+        }
     }
     }

@@ -38,5 +38,53 @@ namespace Application_du_saisie_du_plan_comptable_echec
                 txtLibelleRecette.Text = r.getLibelleR();
             }
         }
+
+        private void btnAjouter_Click(object sender, EventArgs e)
+        {
+            Recette uneRecette = new Recette(Convert.ToInt32(txtIdRecette.Text), txtLibelleRecette.Text);
+            int res = RecetteDAO.creer(uneRecette);
+            if (res != 1)
+            {
+                MessageBox.Show("Ajout effectuée");
+            }
+            else
+            {
+                MessageBox.Show("Problème sur l'ajout");
+            }
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+            Recette uneRecette = new Recette(Convert.ToInt32(txtIdRecette.Text), txtLibelleRecette.Text);
+            int res = RecetteDAO.supprimer(uneRecette);
+            if (res != 1)
+            {
+                MessageBox.Show("Suppression effectuée");
+            }
+            else
+            {
+                MessageBox.Show("Problème sur  la suppression");
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Recette uneRecette = new Recette(Convert.ToInt32(txtIdRecette.Text), txtLibelleRecette.Text);
+            int res = RecetteDAO.modifier(uneRecette);
+            if (res == 1)
+            {
+                MessageBox.Show("Modification effectuée");
+            }
+            else
+            {
+                MessageBox.Show("Problème sur la modification");
+            }
+
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
