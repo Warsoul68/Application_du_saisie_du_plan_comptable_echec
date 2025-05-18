@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.lblIdRecette = new System.Windows.Forms.Label();
-            this.cboIdRecette = new System.Windows.Forms.ComboBox();
             this.lblLibelleRecette = new System.Windows.Forms.Label();
-            this.cboLibelleRecette = new System.Windows.Forms.ComboBox();
-            this.btnRechercher = new System.Windows.Forms.Button();
             this.dgvRecette = new System.Windows.Forms.DataGridView();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
+            this.txtLibelleRecette = new System.Windows.Forms.TextBox();
+            this.txtIdRecette = new System.Windows.Forms.TextBox();
+            this.BtnRechercherId = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecette)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,18 +48,9 @@
             this.lblIdRecette.Location = new System.Drawing.Point(37, 30);
             this.lblIdRecette.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdRecette.Name = "lblIdRecette";
-            this.lblIdRecette.Size = new System.Drawing.Size(118, 18);
+            this.lblIdRecette.Size = new System.Drawing.Size(110, 18);
             this.lblIdRecette.TabIndex = 0;
-            this.lblIdRecette.Text = "Id Recette          :";
-            // 
-            // cboIdRecette
-            // 
-            this.cboIdRecette.FormattingEnabled = true;
-            this.cboIdRecette.Location = new System.Drawing.Point(172, 28);
-            this.cboIdRecette.Margin = new System.Windows.Forms.Padding(4);
-            this.cboIdRecette.Name = "cboIdRecette";
-            this.cboIdRecette.Size = new System.Drawing.Size(73, 24);
-            this.cboIdRecette.TabIndex = 1;
+            this.lblIdRecette.Text = "Id Recette        :";
             // 
             // lblLibelleRecette
             // 
@@ -71,25 +62,6 @@
             this.lblLibelleRecette.Size = new System.Drawing.Size(112, 18);
             this.lblLibelleRecette.TabIndex = 2;
             this.lblLibelleRecette.Text = "Libelle Recette :";
-            // 
-            // cboLibelleRecette
-            // 
-            this.cboLibelleRecette.FormattingEnabled = true;
-            this.cboLibelleRecette.Location = new System.Drawing.Point(172, 58);
-            this.cboLibelleRecette.Margin = new System.Windows.Forms.Padding(4);
-            this.cboLibelleRecette.Name = "cboLibelleRecette";
-            this.cboLibelleRecette.Size = new System.Drawing.Size(164, 24);
-            this.cboLibelleRecette.TabIndex = 3;
-            // 
-            // btnRechercher
-            // 
-            this.btnRechercher.Location = new System.Drawing.Point(393, 58);
-            this.btnRechercher.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRechercher.Name = "btnRechercher";
-            this.btnRechercher.Size = new System.Drawing.Size(100, 28);
-            this.btnRechercher.TabIndex = 4;
-            this.btnRechercher.Text = "Rechercher";
-            this.btnRechercher.UseVisualStyleBackColor = true;
             // 
             // dgvRecette
             // 
@@ -141,20 +113,44 @@
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
             // 
+            // txtLibelleRecette
+            // 
+            this.txtLibelleRecette.Location = new System.Drawing.Point(172, 57);
+            this.txtLibelleRecette.Name = "txtLibelleRecette";
+            this.txtLibelleRecette.Size = new System.Drawing.Size(168, 22);
+            this.txtLibelleRecette.TabIndex = 10;
+            // 
+            // txtIdRecette
+            // 
+            this.txtIdRecette.Location = new System.Drawing.Point(172, 29);
+            this.txtIdRecette.Name = "txtIdRecette";
+            this.txtIdRecette.Size = new System.Drawing.Size(100, 22);
+            this.txtIdRecette.TabIndex = 11;
+            // 
+            // BtnRechercherId
+            // 
+            this.BtnRechercherId.Location = new System.Drawing.Point(393, 58);
+            this.BtnRechercherId.Name = "BtnRechercherId";
+            this.BtnRechercherId.Size = new System.Drawing.Size(121, 23);
+            this.BtnRechercherId.TabIndex = 12;
+            this.BtnRechercherId.Text = "Rechercher par id";
+            this.BtnRechercherId.UseVisualStyleBackColor = true;
+            this.BtnRechercherId.Click += new System.EventHandler(this.BtnRechercherId_Click);
+            // 
             // ParametreRecette
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 353);
+            this.Controls.Add(this.BtnRechercherId);
+            this.Controls.Add(this.txtIdRecette);
+            this.Controls.Add(this.txtLibelleRecette);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.dgvRecette);
-            this.Controls.Add(this.btnRechercher);
-            this.Controls.Add(this.cboLibelleRecette);
             this.Controls.Add(this.lblLibelleRecette);
-            this.Controls.Add(this.cboIdRecette);
             this.Controls.Add(this.lblIdRecette);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ParametreRecette";
@@ -169,14 +165,14 @@
         #endregion
 
         private System.Windows.Forms.Label lblIdRecette;
-        private System.Windows.Forms.ComboBox cboIdRecette;
         private System.Windows.Forms.Label lblLibelleRecette;
-        private System.Windows.Forms.ComboBox cboLibelleRecette;
-        private System.Windows.Forms.Button btnRechercher;
         private System.Windows.Forms.DataGridView dgvRecette;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSupprimer;
+        private System.Windows.Forms.TextBox txtLibelleRecette;
+        private System.Windows.Forms.TextBox txtIdRecette;
+        private System.Windows.Forms.Button BtnRechercherId;
     }
 }

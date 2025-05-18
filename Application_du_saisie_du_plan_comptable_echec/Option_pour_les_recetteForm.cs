@@ -27,5 +27,16 @@ namespace Application_du_saisie_du_plan_comptable_echec
             dgvRecette.Columns["IdRecetteAffiche"].HeaderText = "id";
             dgvRecette.Columns["LibelleRAffiche"].HeaderText = "Libellé";
         }
+
+        private void BtnRechercherId_Click(object sender, EventArgs e)
+        {
+            int recetteId;
+
+            if (int.TryParse(txtIdRecette.Text, out recetteId))
+            {
+                Recette r = RecetteDAO.rechercher(recetteId);
+                txtLibelleRecette.Text = r.getLibelleR();
+            }
+        }
     }
 }

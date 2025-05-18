@@ -33,5 +33,29 @@ namespace LIB_DAL
                     return null;
                 }
             }
+
+        public static Recette rechercher(int vidR)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            cmd.Connection = Bdd.getConnexion();
+            cmd.CommandText = "select * from Recette where id = " + vidR;
+            try
+            {
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+                Recette r = new Recette(dr.GetInt32(0), dr.GetString(1));
+
+                dr.Close();
+                return r;
+            }
+            catch
+            {
+                return null;
+
+
+            }
         }
+    }
     }
