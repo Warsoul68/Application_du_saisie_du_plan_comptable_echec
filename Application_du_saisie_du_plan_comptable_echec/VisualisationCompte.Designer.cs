@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblNumCompte = new System.Windows.Forms.Label();
-            this.cboNumCompte = new System.Windows.Forms.ComboBox();
             this.lblLibelleCompte = new System.Windows.Forms.Label();
             this.txtLibelleCompte = new System.Windows.Forms.TextBox();
             this.lblSoldeCompte = new System.Windows.Forms.Label();
@@ -38,6 +37,7 @@
             this.dgvCompte = new System.Windows.Forms.DataGridView();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnUpdateSolde = new System.Windows.Forms.Button();
+            this.txtNumCompte = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numSoldeCompte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompte)).BeginInit();
             this.SuspendLayout();
@@ -53,15 +53,6 @@
             this.lblNumCompte.TabIndex = 0;
             this.lblNumCompte.Text = "Numéro de compte :";
             // 
-            // cboNumCompte
-            // 
-            this.cboNumCompte.FormattingEnabled = true;
-            this.cboNumCompte.Location = new System.Drawing.Point(183, 23);
-            this.cboNumCompte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cboNumCompte.Name = "cboNumCompte";
-            this.cboNumCompte.Size = new System.Drawing.Size(71, 24);
-            this.cboNumCompte.TabIndex = 1;
-            // 
             // lblLibelleCompte
             // 
             this.lblLibelleCompte.AutoSize = true;
@@ -76,7 +67,7 @@
             // txtLibelleCompte
             // 
             this.txtLibelleCompte.Location = new System.Drawing.Point(183, 65);
-            this.txtLibelleCompte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLibelleCompte.Margin = new System.Windows.Forms.Padding(4);
             this.txtLibelleCompte.Name = "txtLibelleCompte";
             this.txtLibelleCompte.Size = new System.Drawing.Size(132, 22);
             this.txtLibelleCompte.TabIndex = 3;
@@ -95,7 +86,7 @@
             // numSoldeCompte
             // 
             this.numSoldeCompte.Location = new System.Drawing.Point(183, 108);
-            this.numSoldeCompte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numSoldeCompte.Margin = new System.Windows.Forms.Padding(4);
             this.numSoldeCompte.Name = "numSoldeCompte";
             this.numSoldeCompte.Size = new System.Drawing.Size(133, 22);
             this.numSoldeCompte.TabIndex = 5;
@@ -103,7 +94,7 @@
             // btnRechercher
             // 
             this.btnRechercher.Location = new System.Drawing.Point(367, 108);
-            this.btnRechercher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRechercher.Margin = new System.Windows.Forms.Padding(4);
             this.btnRechercher.Name = "btnRechercher";
             this.btnRechercher.Size = new System.Drawing.Size(100, 28);
             this.btnRechercher.TabIndex = 6;
@@ -114,7 +105,7 @@
             // 
             this.dgvCompte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompte.Location = new System.Drawing.Point(20, 150);
-            this.dgvCompte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCompte.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCompte.Name = "dgvCompte";
             this.dgvCompte.RowHeadersWidth = 51;
             this.dgvCompte.Size = new System.Drawing.Size(447, 212);
@@ -123,7 +114,7 @@
             // btnAnnuler
             // 
             this.btnAnnuler.Location = new System.Drawing.Point(16, 369);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(100, 28);
             this.btnAnnuler.TabIndex = 8;
@@ -133,18 +124,26 @@
             // btnUpdateSolde
             // 
             this.btnUpdateSolde.Location = new System.Drawing.Point(308, 369);
-            this.btnUpdateSolde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateSolde.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateSolde.Name = "btnUpdateSolde";
             this.btnUpdateSolde.Size = new System.Drawing.Size(159, 28);
             this.btnUpdateSolde.TabIndex = 9;
             this.btnUpdateSolde.Text = "Mettre a jour le solde";
             this.btnUpdateSolde.UseVisualStyleBackColor = true;
             // 
+            // txtNumCompte
+            // 
+            this.txtNumCompte.Location = new System.Drawing.Point(183, 22);
+            this.txtNumCompte.Name = "txtNumCompte";
+            this.txtNumCompte.Size = new System.Drawing.Size(28, 22);
+            this.txtNumCompte.TabIndex = 10;
+            // 
             // VisualisationCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 427);
+            this.Controls.Add(this.txtNumCompte);
             this.Controls.Add(this.btnUpdateSolde);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.dgvCompte);
@@ -153,9 +152,8 @@
             this.Controls.Add(this.lblSoldeCompte);
             this.Controls.Add(this.txtLibelleCompte);
             this.Controls.Add(this.lblLibelleCompte);
-            this.Controls.Add(this.cboNumCompte);
             this.Controls.Add(this.lblNumCompte);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VisualisationCompte";
             this.Text = "Compte";
             this.Load += new System.EventHandler(this.VisualisationCompte_Load);
@@ -169,7 +167,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblNumCompte;
-        private System.Windows.Forms.ComboBox cboNumCompte;
         private System.Windows.Forms.Label lblLibelleCompte;
         private System.Windows.Forms.TextBox txtLibelleCompte;
         private System.Windows.Forms.Label lblSoldeCompte;
@@ -178,5 +175,6 @@
         private System.Windows.Forms.DataGridView dgvCompte;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnUpdateSolde;
+        private System.Windows.Forms.TextBox txtNumCompte;
     }
 }
