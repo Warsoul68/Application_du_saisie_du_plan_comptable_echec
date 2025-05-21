@@ -35,16 +35,17 @@ namespace LIB_DAL
             }
         }
 
-        public static List<VueOperation> getVueOperationFiltre(int vNumDocument)
+        public static List<VueOperation> getVueOperationFiltre(int vNumDocument = 0, DateTime vDateVo = default(DateTime))
         {
             List<VueOperation> res = new List<VueOperation>();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
             cmd.Connection = Bdd.getConnexion();
 
-            cmd.CommandText = "SELECT * FROM Vue_Selection_Article WHERE 1=1 ";
+            cmd.CommandText = "SELECT * FROM Vue_Operation WHERE 1=1 ";
 
-            if (vLibelleVA != "") cmd.CommandText += " AND Libellé LIKE '%" + vLibelleVA + "%'";
+            if (vNumDocument != 0) cmd.CommandText += " AND Numéro_document = " + vNumDocument;
+            if (vDateVo != default(DateTime)) cmd.CommandText += " AND Date = " + vNumDocument;
 
             try
             {
@@ -52,8 +53,8 @@ namespace LIB_DAL
                 while (dr.Read())
 
                 {
-                    VueArticle va = new VueArticle(dr.GetString(0), dr.GetString(1), dr.GetString(2), dr.GetString(3), dr.GetString(4), dr.GetString(5));
-                    res.Add(va);
+                    VueOperation vo = new VueOperation(dr.GetInt32(0), dr.GetDateTime(1), dr.GetString(2), (float)dr.GetDecimal(3), (float)dr.GetDecimal(4), dr.GetString(5), dr.GetString(6));
+                    res.Add(vo);
 
                 }
 
@@ -66,4 +67,5 @@ namespace LIB_DAL
                 return null;
             }
         }
+    }
 }
