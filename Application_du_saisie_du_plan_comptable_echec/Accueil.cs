@@ -88,9 +88,14 @@ namespace Application_du_saisie_du_plan_comptable_echec
 
         private void btnFiltrer_Click(object sender, EventArgs e)
         {
-            DateTime vDateSaisie = dtpDate.Value;
+            int numDoc = 0;
+            if (!string.IsNullOrWhiteSpace(txtNumDoc.Text))
+                int.TryParse(txtNumDoc.Text, out numDoc);
+
+            DateTime vDateSaisie = dtpDate.Value.Date;
+
             dgvOperation.AutoGenerateColumns = true;
-            dgvOperation.DataSource = VueOperationDAO.getVueOperationFiltre(Convert.ToInt32(txtNumDoc.Text), vDateSaisie);
+            dgvOperation.DataSource = VueOperationDAO.getVueOperationFiltre(numDoc, vDateSaisie);
             dgvOperation.Columns["NumDocumentAffiche"].HeaderText = "Numéro document";
             dgvOperation.Columns["DateVOAffiche"].HeaderText = "Date";
             dgvOperation.Columns["OperationVOAffiche"].HeaderText = "Opération";

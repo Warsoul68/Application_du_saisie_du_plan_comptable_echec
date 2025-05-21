@@ -45,7 +45,7 @@ namespace LIB_DAL
             cmd.CommandText = "SELECT * FROM Vue_Operation WHERE 1=1 ";
 
             if (vNumDocument != 0) cmd.CommandText += " AND Numéro_document = " + vNumDocument;
-            if (vDateVo != default(DateTime)) cmd.CommandText += " AND Date = " + vNumDocument;
+            if (vDateVo != default(DateTime)) cmd.CommandText += " AND Date = '" + vDateVo.ToString("yyyy-MM-dd") + "'";
 
             try
             {
