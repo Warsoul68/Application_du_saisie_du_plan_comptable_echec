@@ -31,6 +31,16 @@ namespace Application_du_saisie_du_plan_comptable_echec
                 MessageBox.Show("la connexion avec la base de donnée est réussie");
                 MessageBox.Show(Bdd.afficherConnexion());
 
+                dgvOperation.AutoGenerateColumns = true;
+                dgvOperation.DataSource = VueOperationDAO.getTouteLesOperationsVo();
+                dgvOperation.Columns["NumDocumentAffiche"].HeaderText = "Numéro document";
+                dgvOperation.Columns["DateVOAffiche"].HeaderText = "Date";
+                dgvOperation.Columns["OperationVOAffiche"].HeaderText = "Opération";
+                dgvOperation.Columns["DebitEuroVOAffiche"].HeaderText = "Débit EUROS";
+                dgvOperation.Columns["CreditEuroVOAffiche"].HeaderText = "Crédit EUROS";
+                dgvOperation.Columns["CategorieDepensesAffiche"].HeaderText = "Catégorie dépenses";
+                dgvOperation.Columns["CategorieRecettesAffiche"].HeaderText = "Catégorie recettes";
+
             }
 
             else
@@ -73,6 +83,11 @@ namespace Application_du_saisie_du_plan_comptable_echec
         {
             OperationFr OFR = new OperationFr();
             OFR.Show();
+
+        }
+
+        private void btnFiltrer_Click(object sender, EventArgs e)
+        {
 
         }
     }

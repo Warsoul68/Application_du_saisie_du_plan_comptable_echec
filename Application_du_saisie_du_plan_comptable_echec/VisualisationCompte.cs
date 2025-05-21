@@ -22,9 +22,9 @@ namespace Application_du_saisie_du_plan_comptable_echec
         {
             dgvCompte.AutoGenerateColumns = true;
             dgvCompte.DataSource = CompteDAO.getTousLesComptes();
-            dgvCompte.Columns["NumCompteAffiche"].HeaderText = "numCompte";
-            dgvCompte.Columns["LibelleCompteAffiche"].HeaderText = "libelleCompte";
-            dgvCompte.Columns["SoldeCompteAffiche"].HeaderText = "soldeCompte";
+            dgvCompte.Columns["NumCompteAffiche"].HeaderText = "num";
+            dgvCompte.Columns["LibelleCompteAffiche"].HeaderText = "libelle";
+            dgvCompte.Columns["SoldeCompteAffiche"].HeaderText = "solde";
 
         }
     }

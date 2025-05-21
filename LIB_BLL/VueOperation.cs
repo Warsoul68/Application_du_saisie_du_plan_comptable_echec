@@ -96,5 +96,13 @@ namespace LIB_BLL
         {
             this.categorieRecettes = categorieRecettes;
         }
+
+        public int NumDocumentAffiche => getNumDocument();
+        public DateTime DateVOAffiche => getDateVO();
+        public string OperationVOAffiche => getOperationVO();
+        public float DebitEuroVOAffiche => getDebitEuroVO();
+        public float CreditEuroVOAffiche => getCreditEuroVO();
+        public string CategorieDepensesAffiche => getCategorieDepenses();
+        public string CategorieRecettesAffiche => getCategorieRecettes();
     }
 }

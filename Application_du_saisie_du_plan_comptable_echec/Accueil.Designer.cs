@@ -38,7 +38,7 @@
             this.cbCategorieDepense = new System.Windows.Forms.ComboBox();
             this.lblCategorieRecettes = new System.Windows.Forms.Label();
             this.cbCategorieRecettes = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOperation = new System.Windows.Forms.DataGridView();
             this.btnNewOperation = new System.Windows.Forms.Button();
             this.tsMenuApplication = new System.Windows.Forms.ToolStrip();
             this.tsParametre = new System.Windows.Forms.ToolStripDropDownButton();
@@ -48,7 +48,7 @@
             this.tsOperation = new System.Windows.Forms.ToolStripButton();
             this.btnFiltrer = new System.Windows.Forms.Button();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperation)).BeginInit();
             this.tsMenuApplication.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,16 +136,16 @@
             this.cbCategorieRecettes.Size = new System.Drawing.Size(121, 24);
             this.cbCategorieRecettes.TabIndex = 9;
             // 
-            // dataGridView1
+            // dgvOperation
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 190);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(521, 244);
-            this.dataGridView1.TabIndex = 10;
+            this.dgvOperation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOperation.Location = new System.Drawing.Point(39, 190);
+            this.dgvOperation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvOperation.Name = "dgvOperation";
+            this.dgvOperation.RowHeadersWidth = 51;
+            this.dgvOperation.RowTemplate.Height = 24;
+            this.dgvOperation.Size = new System.Drawing.Size(521, 244);
+            this.dgvOperation.TabIndex = 10;
             // 
             // btnNewOperation
             // 
@@ -168,7 +168,7 @@
             this.tsOperation});
             this.tsMenuApplication.Location = new System.Drawing.Point(0, 0);
             this.tsMenuApplication.Name = "tsMenuApplication";
-            this.tsMenuApplication.Size = new System.Drawing.Size(611, 31);
+            this.tsMenuApplication.Size = new System.Drawing.Size(611, 27);
             this.tsMenuApplication.TabIndex = 12;
             this.tsMenuApplication.Text = "toolStrip1";
             // 
@@ -181,7 +181,7 @@
             this.tsParametre.Image = ((System.Drawing.Image)(resources.GetObject("tsParametre.Image")));
             this.tsParametre.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsParametre.Name = "tsParametre";
-            this.tsParametre.Size = new System.Drawing.Size(96, 28);
+            this.tsParametre.Size = new System.Drawing.Size(96, 24);
             this.tsParametre.Text = "Paramètres";
             // 
             // tsDepenseParametre
@@ -204,7 +204,7 @@
             this.tsCompte.Image = ((System.Drawing.Image)(resources.GetObject("tsCompte.Image")));
             this.tsCompte.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsCompte.Name = "tsCompte";
-            this.tsCompte.Size = new System.Drawing.Size(66, 28);
+            this.tsCompte.Size = new System.Drawing.Size(66, 24);
             this.tsCompte.Text = "Compte";
             this.tsCompte.Click += new System.EventHandler(this.tsCompte_Click);
             // 
@@ -214,19 +214,20 @@
             this.tsOperation.Image = ((System.Drawing.Image)(resources.GetObject("tsOperation.Image")));
             this.tsOperation.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsOperation.Name = "tsOperation";
-            this.tsOperation.Size = new System.Drawing.Size(80, 28);
+            this.tsOperation.Size = new System.Drawing.Size(80, 24);
             this.tsOperation.Text = "Operation";
             this.tsOperation.Click += new System.EventHandler(this.tsOperation_Click);
             // 
             // btnFiltrer
             // 
             this.btnFiltrer.Location = new System.Drawing.Point(244, 155);
-            this.btnFiltrer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFiltrer.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrer.Name = "btnFiltrer";
             this.btnFiltrer.Size = new System.Drawing.Size(100, 28);
             this.btnFiltrer.TabIndex = 13;
             this.btnFiltrer.Text = "Filtrer";
             this.btnFiltrer.UseVisualStyleBackColor = true;
+            this.btnFiltrer.Click += new System.EventHandler(this.btnFiltrer_Click);
             // 
             // txtNumDoc
             // 
@@ -244,7 +245,7 @@
             this.Controls.Add(this.btnFiltrer);
             this.Controls.Add(this.tsMenuApplication);
             this.Controls.Add(this.btnNewOperation);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOperation);
             this.Controls.Add(this.cbCategorieRecettes);
             this.Controls.Add(this.lblCategorieRecettes);
             this.Controls.Add(this.cbCategorieDepense);
@@ -258,7 +259,7 @@
             this.Name = "Accueil";
             this.Text = "Accueil";
             this.Load += new System.EventHandler(this.Accueil_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperation)).EndInit();
             this.tsMenuApplication.ResumeLayout(false);
             this.tsMenuApplication.PerformLayout();
             this.ResumeLayout(false);
@@ -277,7 +278,7 @@
         private System.Windows.Forms.ComboBox cbCategorieDepense;
         private System.Windows.Forms.Label lblCategorieRecettes;
         private System.Windows.Forms.ComboBox cbCategorieRecettes;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOperation;
         private System.Windows.Forms.Button btnNewOperation;
         private System.Windows.Forms.ToolStrip tsMenuApplication;
         private System.Windows.Forms.ToolStripDropDownButton tsParametre;
