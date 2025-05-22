@@ -9,25 +9,25 @@ namespace LIB_BLL
 {
     public class Utilisateur
     {
-        private int idUtilisateur;
+        private int idU;
         private string login;
         private string pass;
 
-        public Utilisateur(int idUtilisateur, string login, string pass)
+        public Utilisateur(int idU, string login, string pass)
         {
-            this.idUtilisateur = idUtilisateur;
+            this.idU = idU;
             this.login = login;
             this.pass = pass;
         }
 
-        public int getIdUtilisateur()
+        public int getIdU()
         {
-            return idUtilisateur;
+            return idU;
         }
 
-        public void setIdUtilisateur(int idUtilisateur)
+        public void setIdU(int idU)
         {
-            this.idUtilisateur = idUtilisateur;
+            this.idU = idU;
         }
 
         public string getLogin()

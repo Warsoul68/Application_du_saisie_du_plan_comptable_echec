@@ -30,16 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.lblCompte = new System.Windows.Forms.Label();
-            this.cbCompte = new System.Windows.Forms.ComboBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblOperation = new System.Windows.Forms.Label();
             this.txtOperation = new System.Windows.Forms.TextBox();
-            this.lblCategorieDepense = new System.Windows.Forms.Label();
+            this.lblCategorieDepenses = new System.Windows.Forms.Label();
             this.cbCategorieDepense = new System.Windows.Forms.ComboBox();
             this.lblCategorieRecettes = new System.Windows.Forms.Label();
             this.cbCategorieRecettes = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOperation = new System.Windows.Forms.DataGridView();
             this.btnNewOperation = new System.Windows.Forms.Button();
             this.tsMenuApplication = new System.Windows.Forms.ToolStrip();
             this.tsParametre = new System.Windows.Forms.ToolStripDropDownButton();
@@ -48,7 +47,9 @@
             this.tsCompte = new System.Windows.Forms.ToolStripButton();
             this.tsOperation = new System.Windows.Forms.ToolStripButton();
             this.btnFiltrer = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtNumDoc = new System.Windows.Forms.TextBox();
+            this.btnClearFiltre = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperation)).BeginInit();
             this.tsMenuApplication.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,117 +57,105 @@
             // 
             this.lblCompte.AutoSize = true;
             this.lblCompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompte.Location = new System.Drawing.Point(11, 46);
-            this.lblCompte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCompte.Location = new System.Drawing.Point(15, 57);
             this.lblCompte.Name = "lblCompte";
-            this.lblCompte.Size = new System.Drawing.Size(56, 15);
+            this.lblCompte.Size = new System.Drawing.Size(160, 18);
             this.lblCompte.TabIndex = 0;
-            this.lblCompte.Text = "Compte :";
-            // 
-            // cbCompte
-            // 
-            this.cbCompte.FormattingEnabled = true;
-            this.cbCompte.Location = new System.Drawing.Point(71, 45);
-            this.cbCompte.Margin = new System.Windows.Forms.Padding(2);
-            this.cbCompte.Name = "cbCompte";
-            this.cbCompte.Size = new System.Drawing.Size(92, 21);
-            this.cbCompte.TabIndex = 1;
+            this.lblCompte.Text = "Numéro de document :";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(11, 74);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDate.Location = new System.Drawing.Point(15, 91);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(39, 15);
+            this.lblDate.Size = new System.Drawing.Size(47, 18);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Date :";
             // 
             // dtpDate
             // 
-            this.dtpDate.Location = new System.Drawing.Point(54, 75);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDate.Checked = false;
+            this.dtpDate.Location = new System.Drawing.Point(72, 92);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(151, 20);
+            this.dtpDate.ShowCheckBox = true;
+            this.dtpDate.Size = new System.Drawing.Size(200, 22);
             this.dtpDate.TabIndex = 3;
             // 
             // lblOperation
             // 
             this.lblOperation.AutoSize = true;
             this.lblOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOperation.Location = new System.Drawing.Point(11, 101);
-            this.lblOperation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOperation.Location = new System.Drawing.Point(15, 124);
             this.lblOperation.Name = "lblOperation";
-            this.lblOperation.Size = new System.Drawing.Size(67, 15);
+            this.lblOperation.Size = new System.Drawing.Size(81, 18);
             this.lblOperation.TabIndex = 4;
             this.lblOperation.Text = "Opération :";
             // 
             // txtOperation
             // 
-            this.txtOperation.Location = new System.Drawing.Point(82, 101);
-            this.txtOperation.Margin = new System.Windows.Forms.Padding(2);
+            this.txtOperation.Location = new System.Drawing.Point(109, 124);
+            this.txtOperation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOperation.Name = "txtOperation";
-            this.txtOperation.Size = new System.Drawing.Size(76, 20);
+            this.txtOperation.Size = new System.Drawing.Size(100, 22);
             this.txtOperation.TabIndex = 5;
             // 
-            // lblCategorieDepense
+            // lblCategorieDepenses
             // 
-            this.lblCategorieDepense.AutoSize = true;
-            this.lblCategorieDepense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategorieDepense.Location = new System.Drawing.Point(235, 51);
-            this.lblCategorieDepense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCategorieDepense.Name = "lblCategorieDepense";
-            this.lblCategorieDepense.Size = new System.Drawing.Size(117, 15);
-            this.lblCategorieDepense.TabIndex = 6;
-            this.lblCategorieDepense.Text = "Catégorie dépense :";
+            this.lblCategorieDepenses.AutoSize = true;
+            this.lblCategorieDepenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategorieDepenses.Location = new System.Drawing.Point(441, 63);
+            this.lblCategorieDepenses.Name = "lblCategorieDepenses";
+            this.lblCategorieDepenses.Size = new System.Drawing.Size(148, 18);
+            this.lblCategorieDepenses.TabIndex = 6;
+            this.lblCategorieDepenses.Text = "Catégorie dépenses :";
             // 
             // cbCategorieDepense
             // 
             this.cbCategorieDepense.FormattingEnabled = true;
-            this.cbCategorieDepense.Location = new System.Drawing.Point(356, 50);
-            this.cbCategorieDepense.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCategorieDepense.Location = new System.Drawing.Point(604, 63);
+            this.cbCategorieDepense.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategorieDepense.Name = "cbCategorieDepense";
-            this.cbCategorieDepense.Size = new System.Drawing.Size(92, 21);
+            this.cbCategorieDepense.Size = new System.Drawing.Size(121, 24);
             this.cbCategorieDepense.TabIndex = 7;
             // 
             // lblCategorieRecettes
             // 
             this.lblCategorieRecettes.AutoSize = true;
             this.lblCategorieRecettes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategorieRecettes.Location = new System.Drawing.Point(235, 101);
-            this.lblCategorieRecettes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCategorieRecettes.Location = new System.Drawing.Point(441, 118);
             this.lblCategorieRecettes.Name = "lblCategorieRecettes";
-            this.lblCategorieRecettes.Size = new System.Drawing.Size(112, 15);
+            this.lblCategorieRecettes.Size = new System.Drawing.Size(137, 18);
             this.lblCategorieRecettes.TabIndex = 8;
             this.lblCategorieRecettes.Text = "Catégorie recettes :";
             // 
             // cbCategorieRecettes
             // 
             this.cbCategorieRecettes.FormattingEnabled = true;
-            this.cbCategorieRecettes.Location = new System.Drawing.Point(351, 100);
-            this.cbCategorieRecettes.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCategorieRecettes.Location = new System.Drawing.Point(604, 118);
+            this.cbCategorieRecettes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategorieRecettes.Name = "cbCategorieRecettes";
-            this.cbCategorieRecettes.Size = new System.Drawing.Size(92, 21);
+            this.cbCategorieRecettes.Size = new System.Drawing.Size(121, 24);
             this.cbCategorieRecettes.TabIndex = 9;
             // 
-            // dataGridView1
+            // dgvOperation
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 154);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(391, 198);
-            this.dataGridView1.TabIndex = 10;
+            this.dgvOperation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOperation.Location = new System.Drawing.Point(18, 190);
+            this.dgvOperation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvOperation.Name = "dgvOperation";
+            this.dgvOperation.RowHeadersWidth = 51;
+            this.dgvOperation.RowTemplate.Height = 24;
+            this.dgvOperation.Size = new System.Drawing.Size(741, 266);
+            this.dgvOperation.TabIndex = 10;
             // 
             // btnNewOperation
             // 
-            this.btnNewOperation.Location = new System.Drawing.Point(157, 356);
-            this.btnNewOperation.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNewOperation.Location = new System.Drawing.Point(266, 475);
+            this.btnNewOperation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNewOperation.Name = "btnNewOperation";
-            this.btnNewOperation.Size = new System.Drawing.Size(125, 20);
+            this.btnNewOperation.Size = new System.Drawing.Size(167, 25);
             this.btnNewOperation.TabIndex = 11;
             this.btnNewOperation.Text = "Nouvel Opération";
             this.btnNewOperation.UseVisualStyleBackColor = true;
@@ -175,13 +164,14 @@
             // tsMenuApplication
             // 
             this.tsMenuApplication.BackColor = System.Drawing.Color.Silver;
+            this.tsMenuApplication.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.tsMenuApplication.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsParametre,
             this.tsCompte,
             this.tsOperation});
             this.tsMenuApplication.Location = new System.Drawing.Point(0, 0);
             this.tsMenuApplication.Name = "tsMenuApplication";
-            this.tsMenuApplication.Size = new System.Drawing.Size(458, 25);
+            this.tsMenuApplication.Size = new System.Drawing.Size(771, 27);
             this.tsMenuApplication.TabIndex = 12;
             this.tsMenuApplication.Text = "toolStrip1";
             // 
@@ -194,20 +184,20 @@
             this.tsParametre.Image = ((System.Drawing.Image)(resources.GetObject("tsParametre.Image")));
             this.tsParametre.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsParametre.Name = "tsParametre";
-            this.tsParametre.Size = new System.Drawing.Size(79, 22);
+            this.tsParametre.Size = new System.Drawing.Size(96, 24);
             this.tsParametre.Text = "Paramètres";
             // 
             // tsDepenseParametre
             // 
             this.tsDepenseParametre.Name = "tsDepenseParametre";
-            this.tsDepenseParametre.Size = new System.Drawing.Size(180, 22);
+            this.tsDepenseParametre.Size = new System.Drawing.Size(150, 26);
             this.tsDepenseParametre.Text = "Dépense";
             this.tsDepenseParametre.Click += new System.EventHandler(this.tsDepenseParametre_Click);
             // 
             // tsRecetteParametre
             // 
             this.tsRecetteParametre.Name = "tsRecetteParametre";
-            this.tsRecetteParametre.Size = new System.Drawing.Size(180, 22);
+            this.tsRecetteParametre.Size = new System.Drawing.Size(150, 26);
             this.tsRecetteParametre.Text = "Recette";
             this.tsRecetteParametre.Click += new System.EventHandler(this.tsRecetteParametre_Click);
             // 
@@ -217,7 +207,7 @@
             this.tsCompte.Image = ((System.Drawing.Image)(resources.GetObject("tsCompte.Image")));
             this.tsCompte.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsCompte.Name = "tsCompte";
-            this.tsCompte.Size = new System.Drawing.Size(54, 22);
+            this.tsCompte.Size = new System.Drawing.Size(66, 24);
             this.tsCompte.Text = "Compte";
             this.tsCompte.Click += new System.EventHandler(this.tsCompte_Click);
             // 
@@ -227,43 +217,63 @@
             this.tsOperation.Image = ((System.Drawing.Image)(resources.GetObject("tsOperation.Image")));
             this.tsOperation.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsOperation.Name = "tsOperation";
-            this.tsOperation.Size = new System.Drawing.Size(64, 22);
+            this.tsOperation.Size = new System.Drawing.Size(80, 24);
             this.tsOperation.Text = "Operation";
             this.tsOperation.Click += new System.EventHandler(this.tsOperation_Click);
             // 
             // btnFiltrer
             // 
-            this.btnFiltrer.Location = new System.Drawing.Point(183, 126);
+            this.btnFiltrer.Location = new System.Drawing.Point(266, 156);
+            this.btnFiltrer.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrer.Name = "btnFiltrer";
-            this.btnFiltrer.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrer.Size = new System.Drawing.Size(100, 28);
             this.btnFiltrer.TabIndex = 13;
             this.btnFiltrer.Text = "Filtrer";
             this.btnFiltrer.UseVisualStyleBackColor = true;
+            this.btnFiltrer.Click += new System.EventHandler(this.btnFiltrer_Click);
+            // 
+            // txtNumDoc
+            // 
+            this.txtNumDoc.Location = new System.Drawing.Point(181, 56);
+            this.txtNumDoc.Name = "txtNumDoc";
+            this.txtNumDoc.Size = new System.Drawing.Size(44, 22);
+            this.txtNumDoc.TabIndex = 14;
+            // 
+            // btnClearFiltre
+            // 
+            this.btnClearFiltre.Location = new System.Drawing.Point(421, 159);
+            this.btnClearFiltre.Name = "btnClearFiltre";
+            this.btnClearFiltre.Size = new System.Drawing.Size(130, 26);
+            this.btnClearFiltre.TabIndex = 15;
+            this.btnClearFiltre.Text = "Enlever les filtres";
+            this.btnClearFiltre.UseVisualStyleBackColor = true;
+            this.btnClearFiltre.Click += new System.EventHandler(this.btnClearFiltre_Click);
             // 
             // Accueil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 405);
+            this.ClientSize = new System.Drawing.Size(771, 511);
+            this.Controls.Add(this.btnClearFiltre);
+            this.Controls.Add(this.txtNumDoc);
             this.Controls.Add(this.btnFiltrer);
             this.Controls.Add(this.tsMenuApplication);
             this.Controls.Add(this.btnNewOperation);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOperation);
             this.Controls.Add(this.cbCategorieRecettes);
             this.Controls.Add(this.lblCategorieRecettes);
             this.Controls.Add(this.cbCategorieDepense);
-            this.Controls.Add(this.lblCategorieDepense);
+            this.Controls.Add(this.lblCategorieDepenses);
             this.Controls.Add(this.txtOperation);
             this.Controls.Add(this.lblOperation);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.cbCompte);
             this.Controls.Add(this.lblCompte);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Accueil";
             this.Text = "Accueil";
             this.Load += new System.EventHandler(this.Accueil_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperation)).EndInit();
             this.tsMenuApplication.ResumeLayout(false);
             this.tsMenuApplication.PerformLayout();
             this.ResumeLayout(false);
@@ -274,16 +284,15 @@
         #endregion
 
         private System.Windows.Forms.Label lblCompte;
-        private System.Windows.Forms.ComboBox cbCompte;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label lblOperation;
         private System.Windows.Forms.TextBox txtOperation;
-        private System.Windows.Forms.Label lblCategorieDepense;
+        private System.Windows.Forms.Label lblCategorieDepenses;
         private System.Windows.Forms.ComboBox cbCategorieDepense;
         private System.Windows.Forms.Label lblCategorieRecettes;
         private System.Windows.Forms.ComboBox cbCategorieRecettes;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOperation;
         private System.Windows.Forms.Button btnNewOperation;
         private System.Windows.Forms.ToolStrip tsMenuApplication;
         private System.Windows.Forms.ToolStripDropDownButton tsParametre;
@@ -292,6 +301,8 @@
         private System.Windows.Forms.ToolStripButton tsCompte;
         private System.Windows.Forms.ToolStripButton tsOperation;
         private System.Windows.Forms.Button btnFiltrer;
+        private System.Windows.Forms.TextBox txtNumDoc;
+        private System.Windows.Forms.Button btnClearFiltre;
     }
 }
 

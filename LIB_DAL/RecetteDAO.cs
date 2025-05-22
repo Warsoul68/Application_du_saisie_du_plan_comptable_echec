@@ -34,12 +34,12 @@ namespace LIB_DAL
                 }
             }
 
-        public static Recette rechercher(int vidR)
+        public static Recette rechercher(int vIdR)
         {
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
             cmd.Connection = Bdd.getConnexion();
-            cmd.CommandText = "select * from Recette where id = " + vidR;
+            cmd.CommandText = "select * from Recette where id = " + vIdR;
             try
             {
                 dr = cmd.ExecuteReader();

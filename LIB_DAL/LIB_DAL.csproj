@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AffecteDAO.cs" />
     <Compile Include="AnneeDAO.cs" />
     <Compile Include="Bdd.cs" />
     <Compile Include="CompteDAO.cs" />
