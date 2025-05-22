@@ -49,85 +49,83 @@
             // 
             this.lblNomOperation.AutoSize = true;
             this.lblNomOperation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomOperation.Location = new System.Drawing.Point(9, 38);
-            this.lblNomOperation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNomOperation.Location = new System.Drawing.Point(12, 47);
             this.lblNomOperation.Name = "lblNomOperation";
-            this.lblNomOperation.Size = new System.Drawing.Size(118, 15);
+            this.lblNomOperation.Size = new System.Drawing.Size(141, 18);
             this.lblNomOperation.TabIndex = 0;
             this.lblNomOperation.Text = "Nom de l\'opération :";
             // 
             // txtNomOperation
             // 
-            this.txtNomOperation.Location = new System.Drawing.Point(131, 38);
-            this.txtNomOperation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomOperation.Location = new System.Drawing.Point(175, 47);
+            this.txtNomOperation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNomOperation.Name = "txtNomOperation";
-            this.txtNomOperation.Size = new System.Drawing.Size(131, 20);
+            this.txtNomOperation.Size = new System.Drawing.Size(173, 22);
             this.txtNomOperation.TabIndex = 1;
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(9, 15);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDate.Location = new System.Drawing.Point(12, 18);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(39, 15);
+            this.lblDate.Size = new System.Drawing.Size(47, 18);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Date :";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(131, 11);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(175, 14);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
             this.lblMontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontant.Location = new System.Drawing.Point(9, 68);
-            this.lblMontant.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMontant.Location = new System.Drawing.Point(12, 84);
             this.lblMontant.Name = "lblMontant";
-            this.lblMontant.Size = new System.Drawing.Size(58, 15);
+            this.lblMontant.Size = new System.Drawing.Size(70, 18);
             this.lblMontant.TabIndex = 4;
             this.lblMontant.Text = "Montant :";
             // 
             // txtDebitEuro
             // 
-            this.txtDebitEuro.Location = new System.Drawing.Point(66, 68);
-            this.txtDebitEuro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDebitEuro.Location = new System.Drawing.Point(88, 84);
+            this.txtDebitEuro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDebitEuro.Name = "txtDebitEuro";
-            this.txtDebitEuro.Size = new System.Drawing.Size(76, 20);
+            this.txtDebitEuro.Size = new System.Drawing.Size(100, 22);
             this.txtDebitEuro.TabIndex = 5;
             // 
             // lblCategorieDepenses
             // 
             this.lblCategorieDepenses.AutoSize = true;
             this.lblCategorieDepenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategorieDepenses.Location = new System.Drawing.Point(287, 81);
-            this.lblCategorieDepenses.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCategorieDepenses.Location = new System.Drawing.Point(383, 100);
             this.lblCategorieDepenses.Name = "lblCategorieDepenses";
-            this.lblCategorieDepenses.Size = new System.Drawing.Size(119, 15);
+            this.lblCategorieDepenses.Size = new System.Drawing.Size(143, 18);
             this.lblCategorieDepenses.TabIndex = 6;
             this.lblCategorieDepenses.Text = "Catégorie Dépense :";
+            this.lblCategorieDepenses.Visible = false;
             // 
             // cbCategorieDepense
             // 
             this.cbCategorieDepense.FormattingEnabled = true;
-            this.cbCategorieDepense.Location = new System.Drawing.Point(399, 80);
-            this.cbCategorieDepense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCategorieDepense.Location = new System.Drawing.Point(553, 100);
+            this.cbCategorieDepense.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategorieDepense.Name = "cbCategorieDepense";
-            this.cbCategorieDepense.Size = new System.Drawing.Size(124, 21);
+            this.cbCategorieDepense.Size = new System.Drawing.Size(164, 24);
             this.cbCategorieDepense.TabIndex = 7;
+            this.cbCategorieDepense.Visible = false;
             // 
             // btnCree
             // 
-            this.btnCree.Location = new System.Drawing.Point(250, 152);
-            this.btnCree.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCree.Location = new System.Drawing.Point(333, 187);
+            this.btnCree.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCree.Name = "btnCree";
-            this.btnCree.Size = new System.Drawing.Size(56, 19);
+            this.btnCree.Size = new System.Drawing.Size(75, 23);
             this.btnCree.TabIndex = 8;
             this.btnCree.Text = "Crée";
             this.btnCree.UseVisualStyleBackColor = true;
@@ -136,72 +134,74 @@
             // 
             this.lblChoixCategories.AutoSize = true;
             this.lblChoixCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChoixCategories.Location = new System.Drawing.Point(9, 98);
-            this.lblChoixCategories.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblChoixCategories.Location = new System.Drawing.Point(12, 121);
             this.lblChoixCategories.Name = "lblChoixCategories";
-            this.lblChoixCategories.Size = new System.Drawing.Size(115, 15);
+            this.lblChoixCategories.Size = new System.Drawing.Size(139, 18);
             this.lblChoixCategories.TabIndex = 9;
             this.lblChoixCategories.Text = "Choix de catégorie :";
             // 
             // rdbDepense
             // 
             this.rdbDepense.AutoSize = true;
-            this.rdbDepense.Location = new System.Drawing.Point(135, 98);
-            this.rdbDepense.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbDepense.Location = new System.Drawing.Point(180, 121);
+            this.rdbDepense.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbDepense.Name = "rdbDepense";
-            this.rdbDepense.Size = new System.Drawing.Size(68, 17);
+            this.rdbDepense.Size = new System.Drawing.Size(84, 20);
             this.rdbDepense.TabIndex = 10;
             this.rdbDepense.TabStop = true;
             this.rdbDepense.Text = "Dépense";
             this.rdbDepense.UseVisualStyleBackColor = true;
+            this.rdbDepense.CheckedChanged += new System.EventHandler(this.rdbDepense_CheckedChanged);
             // 
             // rdbRecette
             // 
             this.rdbRecette.AutoSize = true;
-            this.rdbRecette.Location = new System.Drawing.Point(202, 98);
-            this.rdbRecette.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbRecette.Location = new System.Drawing.Point(269, 121);
+            this.rdbRecette.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdbRecette.Name = "rdbRecette";
-            this.rdbRecette.Size = new System.Drawing.Size(63, 17);
+            this.rdbRecette.Size = new System.Drawing.Size(75, 20);
             this.rdbRecette.TabIndex = 11;
             this.rdbRecette.TabStop = true;
             this.rdbRecette.Text = "Recette";
             this.rdbRecette.UseVisualStyleBackColor = true;
+            this.rdbRecette.CheckedChanged += new System.EventHandler(this.rdbRecette_CheckedChanged);
             // 
             // lblCategorieRecette
             // 
             this.lblCategorieRecette.AutoSize = true;
             this.lblCategorieRecette.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategorieRecette.Location = new System.Drawing.Point(287, 110);
-            this.lblCategorieRecette.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCategorieRecette.Location = new System.Drawing.Point(383, 135);
             this.lblCategorieRecette.Name = "lblCategorieRecette";
-            this.lblCategorieRecette.Size = new System.Drawing.Size(111, 15);
+            this.lblCategorieRecette.Size = new System.Drawing.Size(135, 18);
             this.lblCategorieRecette.TabIndex = 12;
             this.lblCategorieRecette.Text = "Catégorie Recette :";
+            this.lblCategorieRecette.Visible = false;
             // 
             // cbCategorieRecette
             // 
             this.cbCategorieRecette.FormattingEnabled = true;
-            this.cbCategorieRecette.Location = new System.Drawing.Point(399, 109);
-            this.cbCategorieRecette.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCategorieRecette.Location = new System.Drawing.Point(553, 134);
+            this.cbCategorieRecette.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategorieRecette.Name = "cbCategorieRecette";
-            this.cbCategorieRecette.Size = new System.Drawing.Size(124, 21);
+            this.cbCategorieRecette.Size = new System.Drawing.Size(164, 24);
             this.cbCategorieRecette.TabIndex = 13;
+            this.cbCategorieRecette.Visible = false;
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(169, 152);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAnnuler.Location = new System.Drawing.Point(225, 187);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(56, 19);
+            this.btnAnnuler.Size = new System.Drawing.Size(75, 23);
             this.btnAnnuler.TabIndex = 14;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
             // NouvelleOperationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 180);
+            this.ClientSize = new System.Drawing.Size(729, 222);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.cbCategorieRecette);
             this.Controls.Add(this.lblCategorieRecette);
@@ -217,7 +217,7 @@
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.txtNomOperation);
             this.Controls.Add(this.lblNomOperation);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NouvelleOperationForm";
             this.Text = "Crée une nouvelle opération";
             this.ResumeLayout(false);
