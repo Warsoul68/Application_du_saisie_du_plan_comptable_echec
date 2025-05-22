@@ -41,6 +41,15 @@ namespace Application_du_saisie_du_plan_comptable_echec
                 dgvOperation.Columns["CategorieDepensesAffiche"].HeaderText = "Catégorie dépenses";
                 dgvOperation.Columns["CategorieRecettesAffiche"].HeaderText = "Catégorie recettes";
 
+                foreach (Depense d in DepenseDAO.getTouteLesDepenses())
+                {
+                    cbCategorieDepense.Items.Add(d.getLibelleD());
+                }
+
+                foreach (Recette r in RecetteDAO.getTouteLesRecette())
+                {
+                    cbCategorieRecettes.Items.Add(r.getLibelleR());
+                }
             }
 
             else
@@ -92,10 +101,28 @@ namespace Application_du_saisie_du_plan_comptable_echec
             if (!string.IsNullOrWhiteSpace(txtNumDoc.Text))
                 int.TryParse(txtNumDoc.Text, out numDoc);
 
-            DateTime vDateSaisie = dtpDate.Value.Date;
+            DateTime vDateSaisie = default(DateTime);
+            if (dtpDate.Checked)
+            {
+                vDateSaisie = dtpDate.Value.Date;
+            }
 
             dgvOperation.AutoGenerateColumns = true;
-            dgvOperation.DataSource = VueOperationDAO.getVueOperationFiltre(numDoc, vDateSaisie);
+            dgvOperation.DataSource = VueOperationDAO.getVueOperationFiltre(numDoc, vDateSaisie, txtOperation.Text, cbCategorieDepense.Text, cbCategorieRecettes.Text);
+            dgvOperation.Columns["NumDocumentAffiche"].HeaderText = "Numéro document";
+            dgvOperation.Columns["DateVOAffiche"].HeaderText = "Date";
+            dgvOperation.Columns["OperationVOAffiche"].HeaderText = "Opération";
+            dgvOperation.Columns["DebitEuroVOAffiche"].HeaderText = "Débit EUROS";
+            dgvOperation.Columns["CreditEuroVOAffiche"].HeaderText = "Crédit EUROS";
+            dgvOperation.Columns["CategorieDepensesAffiche"].HeaderText = "Catégorie dépenses";
+            dgvOperation.Columns["CategorieRecettesAffiche"].HeaderText = "Catégorie recettes";
+
+        }
+
+        private void btnClearFiltre_Click(object sender, EventArgs e)
+        {
+            dgvOperation.AutoGenerateColumns = true;
+            dgvOperation.DataSource = VueOperationDAO.getTouteLesOperationsVo();
             dgvOperation.Columns["NumDocumentAffiche"].HeaderText = "Numéro document";
             dgvOperation.Columns["DateVOAffiche"].HeaderText = "Date";
             dgvOperation.Columns["OperationVOAffiche"].HeaderText = "Opération";

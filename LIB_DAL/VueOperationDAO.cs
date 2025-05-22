@@ -35,7 +35,7 @@ namespace LIB_DAL
             }
         }
 
-        public static List<VueOperation> getVueOperationFiltre(int vNumDocument = 0, DateTime vDateVo = default(DateTime))
+        public static List<VueOperation> getVueOperationFiltre(int vNumDocument = 0, DateTime vDateVo = default(DateTime), string vOperationVo = "", string vCategorieDepensesVo = "", string vCategorieRecettesVo = "")
         {
             List<VueOperation> res = new List<VueOperation>();
             SqlCommand cmd = new SqlCommand();
@@ -46,6 +46,9 @@ namespace LIB_DAL
 
             if (vNumDocument != 0) cmd.CommandText += " AND Numéro_document = " + vNumDocument;
             if (vDateVo != default(DateTime)) cmd.CommandText += " AND Date = '" + vDateVo.ToString("yyyy-MM-dd") + "'";
+            if (vOperationVo != "") cmd.CommandText += " AND Opération LIKE '%" + vOperationVo + "%'";
+            if (vCategorieDepensesVo != "") cmd.CommandText += " AND Catégorie_dépenses = '" + vCategorieDepensesVo + "'";
+            if (vCategorieRecettesVo != "") cmd.CommandText += " AND Catégorie_recettes = '" + vCategorieRecettesVo + "'";
 
             try
             {

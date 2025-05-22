@@ -48,6 +48,7 @@
             this.tsOperation = new System.Windows.Forms.ToolStripButton();
             this.btnFiltrer = new System.Windows.Forms.Button();
             this.txtNumDoc = new System.Windows.Forms.TextBox();
+            this.btnClearFiltre = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperation)).BeginInit();
             this.tsMenuApplication.SuspendLayout();
             this.SuspendLayout();
@@ -74,9 +75,11 @@
             // 
             // dtpDate
             // 
+            this.dtpDate.Checked = false;
             this.dtpDate.Location = new System.Drawing.Point(72, 92);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDate.Name = "dtpDate";
+            this.dtpDate.ShowCheckBox = true;
             this.dtpDate.Size = new System.Drawing.Size(200, 22);
             this.dtpDate.TabIndex = 3;
             // 
@@ -102,7 +105,7 @@
             // 
             this.lblCategorieDepenses.AutoSize = true;
             this.lblCategorieDepenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategorieDepenses.Location = new System.Drawing.Point(313, 63);
+            this.lblCategorieDepenses.Location = new System.Drawing.Point(441, 63);
             this.lblCategorieDepenses.Name = "lblCategorieDepenses";
             this.lblCategorieDepenses.Size = new System.Drawing.Size(148, 18);
             this.lblCategorieDepenses.TabIndex = 6;
@@ -111,7 +114,7 @@
             // cbCategorieDepense
             // 
             this.cbCategorieDepense.FormattingEnabled = true;
-            this.cbCategorieDepense.Location = new System.Drawing.Point(475, 62);
+            this.cbCategorieDepense.Location = new System.Drawing.Point(604, 63);
             this.cbCategorieDepense.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategorieDepense.Name = "cbCategorieDepense";
             this.cbCategorieDepense.Size = new System.Drawing.Size(121, 24);
@@ -121,7 +124,7 @@
             // 
             this.lblCategorieRecettes.AutoSize = true;
             this.lblCategorieRecettes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategorieRecettes.Location = new System.Drawing.Point(313, 124);
+            this.lblCategorieRecettes.Location = new System.Drawing.Point(441, 118);
             this.lblCategorieRecettes.Name = "lblCategorieRecettes";
             this.lblCategorieRecettes.Size = new System.Drawing.Size(137, 18);
             this.lblCategorieRecettes.TabIndex = 8;
@@ -130,7 +133,7 @@
             // cbCategorieRecettes
             // 
             this.cbCategorieRecettes.FormattingEnabled = true;
-            this.cbCategorieRecettes.Location = new System.Drawing.Point(468, 123);
+            this.cbCategorieRecettes.Location = new System.Drawing.Point(604, 118);
             this.cbCategorieRecettes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategorieRecettes.Name = "cbCategorieRecettes";
             this.cbCategorieRecettes.Size = new System.Drawing.Size(121, 24);
@@ -139,17 +142,17 @@
             // dgvOperation
             // 
             this.dgvOperation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOperation.Location = new System.Drawing.Point(39, 190);
+            this.dgvOperation.Location = new System.Drawing.Point(18, 190);
             this.dgvOperation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvOperation.Name = "dgvOperation";
             this.dgvOperation.RowHeadersWidth = 51;
             this.dgvOperation.RowTemplate.Height = 24;
-            this.dgvOperation.Size = new System.Drawing.Size(521, 244);
+            this.dgvOperation.Size = new System.Drawing.Size(741, 266);
             this.dgvOperation.TabIndex = 10;
             // 
             // btnNewOperation
             // 
-            this.btnNewOperation.Location = new System.Drawing.Point(209, 438);
+            this.btnNewOperation.Location = new System.Drawing.Point(266, 475);
             this.btnNewOperation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNewOperation.Name = "btnNewOperation";
             this.btnNewOperation.Size = new System.Drawing.Size(167, 25);
@@ -168,7 +171,7 @@
             this.tsOperation});
             this.tsMenuApplication.Location = new System.Drawing.Point(0, 0);
             this.tsMenuApplication.Name = "tsMenuApplication";
-            this.tsMenuApplication.Size = new System.Drawing.Size(611, 27);
+            this.tsMenuApplication.Size = new System.Drawing.Size(771, 27);
             this.tsMenuApplication.TabIndex = 12;
             this.tsMenuApplication.Text = "toolStrip1";
             // 
@@ -220,7 +223,7 @@
             // 
             // btnFiltrer
             // 
-            this.btnFiltrer.Location = new System.Drawing.Point(244, 155);
+            this.btnFiltrer.Location = new System.Drawing.Point(266, 156);
             this.btnFiltrer.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrer.Name = "btnFiltrer";
             this.btnFiltrer.Size = new System.Drawing.Size(100, 28);
@@ -236,11 +239,22 @@
             this.txtNumDoc.Size = new System.Drawing.Size(44, 22);
             this.txtNumDoc.TabIndex = 14;
             // 
+            // btnClearFiltre
+            // 
+            this.btnClearFiltre.Location = new System.Drawing.Point(421, 159);
+            this.btnClearFiltre.Name = "btnClearFiltre";
+            this.btnClearFiltre.Size = new System.Drawing.Size(130, 26);
+            this.btnClearFiltre.TabIndex = 15;
+            this.btnClearFiltre.Text = "Enlever les filtres";
+            this.btnClearFiltre.UseVisualStyleBackColor = true;
+            this.btnClearFiltre.Click += new System.EventHandler(this.btnClearFiltre_Click);
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 498);
+            this.ClientSize = new System.Drawing.Size(771, 511);
+            this.Controls.Add(this.btnClearFiltre);
             this.Controls.Add(this.txtNumDoc);
             this.Controls.Add(this.btnFiltrer);
             this.Controls.Add(this.tsMenuApplication);
@@ -288,6 +302,7 @@
         private System.Windows.Forms.ToolStripButton tsOperation;
         private System.Windows.Forms.Button btnFiltrer;
         private System.Windows.Forms.TextBox txtNumDoc;
+        private System.Windows.Forms.Button btnClearFiltre;
     }
 }
 
