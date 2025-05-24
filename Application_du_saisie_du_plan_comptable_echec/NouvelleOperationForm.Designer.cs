@@ -33,7 +33,6 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblMontant = new System.Windows.Forms.Label();
-            this.txtDebitEuro = new System.Windows.Forms.TextBox();
             this.lblCategorieDepenses = new System.Windows.Forms.Label();
             this.cbCategorieDepense = new System.Windows.Forms.ComboBox();
             this.btnCree = new System.Windows.Forms.Button();
@@ -43,6 +42,13 @@
             this.lblCategorieRecette = new System.Windows.Forms.Label();
             this.cbCategorieRecette = new System.Windows.Forms.ComboBox();
             this.btnAnnuler = new System.Windows.Forms.Button();
+            this.lblAnneeResultat = new System.Windows.Forms.Label();
+            this.cboAnneeResultat = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NumTransaction = new System.Windows.Forms.NumericUpDown();
+            this.numMontant = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.NumTransaction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMontant)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomOperation
@@ -90,14 +96,6 @@
             this.lblMontant.Size = new System.Drawing.Size(70, 18);
             this.lblMontant.TabIndex = 4;
             this.lblMontant.Text = "Montant :";
-            // 
-            // txtDebitEuro
-            // 
-            this.txtDebitEuro.Location = new System.Drawing.Point(88, 84);
-            this.txtDebitEuro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDebitEuro.Name = "txtDebitEuro";
-            this.txtDebitEuro.Size = new System.Drawing.Size(100, 22);
-            this.txtDebitEuro.TabIndex = 5;
             // 
             // lblCategorieDepenses
             // 
@@ -197,11 +195,58 @@
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
+            // lblAnneeResultat
+            // 
+            this.lblAnneeResultat.AutoSize = true;
+            this.lblAnneeResultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblAnneeResultat.Location = new System.Drawing.Point(437, 18);
+            this.lblAnneeResultat.Name = "lblAnneeResultat";
+            this.lblAnneeResultat.Size = new System.Drawing.Size(129, 18);
+            this.lblAnneeResultat.TabIndex = 15;
+            this.lblAnneeResultat.Text = "Année de résultat :";
+            // 
+            // cboAnneeResultat
+            // 
+            this.cboAnneeResultat.FormattingEnabled = true;
+            this.cboAnneeResultat.Location = new System.Drawing.Point(572, 16);
+            this.cboAnneeResultat.Name = "cboAnneeResultat";
+            this.cboAnneeResultat.Size = new System.Drawing.Size(133, 24);
+            this.cboAnneeResultat.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.Location = new System.Drawing.Point(437, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 18);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Id de la transaction :";
+            // 
+            // NumTransaction
+            // 
+            this.NumTransaction.Location = new System.Drawing.Point(582, 46);
+            this.NumTransaction.Name = "NumTransaction";
+            this.NumTransaction.Size = new System.Drawing.Size(120, 22);
+            this.NumTransaction.TabIndex = 18;
+            // 
+            // numMontant
+            // 
+            this.numMontant.Location = new System.Drawing.Point(88, 84);
+            this.numMontant.Name = "numMontant";
+            this.numMontant.Size = new System.Drawing.Size(120, 22);
+            this.numMontant.TabIndex = 19;
+            // 
             // NouvelleOperationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(729, 222);
+            this.Controls.Add(this.numMontant);
+            this.Controls.Add(this.NumTransaction);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cboAnneeResultat);
+            this.Controls.Add(this.lblAnneeResultat);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.cbCategorieRecette);
             this.Controls.Add(this.lblCategorieRecette);
@@ -211,7 +256,6 @@
             this.Controls.Add(this.btnCree);
             this.Controls.Add(this.cbCategorieDepense);
             this.Controls.Add(this.lblCategorieDepenses);
-            this.Controls.Add(this.txtDebitEuro);
             this.Controls.Add(this.lblMontant);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.lblDate);
@@ -220,6 +264,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NouvelleOperationForm";
             this.Text = "Crée une nouvelle opération";
+            ((System.ComponentModel.ISupportInitialize)(this.NumTransaction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMontant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +278,6 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lblMontant;
-        private System.Windows.Forms.TextBox txtDebitEuro;
         private System.Windows.Forms.Label lblCategorieDepenses;
         private System.Windows.Forms.ComboBox cbCategorieDepense;
         private System.Windows.Forms.Button btnCree;
@@ -242,5 +287,10 @@
         private System.Windows.Forms.Label lblCategorieRecette;
         private System.Windows.Forms.ComboBox cbCategorieRecette;
         private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.Label lblAnneeResultat;
+        private System.Windows.Forms.ComboBox cboAnneeResultat;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown NumTransaction;
+        private System.Windows.Forms.NumericUpDown numMontant;
     }
 }
