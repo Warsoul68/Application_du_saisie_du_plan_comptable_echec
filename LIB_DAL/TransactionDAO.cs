@@ -28,9 +28,52 @@ namespace LIB_DAL
             catch
             {
                 return 0;
+            }
+        }
+
+        public static int supprimer(Transaction t)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            cmd.Connection = Bdd.getConnexion();
+            cmd.CommandText = "delete from TransactionO where idTransaction = " + t.getIdTransaction();
+            try
+            {
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+
+                dr.Close();
+                return cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                return 0;
 
 
             }
         }
-    }
+
+        public static int modifier(Transaction t)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            cmd.Connection = Bdd.getConnexion();
+            cmd.CommandText = "update TransactionO set montant = " + t.getMontant() + " where idTransaction = " + t.getIdTransaction();
+            try
+            {
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+
+                dr.Close();
+                return cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                return 0;
+
+
+            }
+        }
 }
